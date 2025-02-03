@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Select a Wallet</title>
+</head>
+<body class="bg-white flex flex-col items-center p-6">
+    <h1 class="text-2xl font-bold text-gray-900">Select a Wallet</h1>
+    <div class="w-24 h-1 bg-pink-500 my-2"></div>
+    
+    <div class="flex items-center w-full max-w-2xl mt-4 border border-gray-300 rounded-lg overflow-hidden">
+        <input type="text" placeholder="Find your wallet" class="w-full p-3 focus:outline-none" />
+        <button class="bg-pink-500 text-white px-6 py-3">Search</button>
+    </div>
+    
+    <p class="mt-4 text-gray-600">0 results found</p>
+    
+    <div class="grid grid-cols-3 gap-6 mt-4 max-w-4xl">
+        <div class="bg-white shadow-md rounded-lg p-4 flex items-center space-x-3">
+            <img src="ledger-logo.png" alt="Ledger" class="w-12 h-12" />
+            <div>
+                <p class="font-semibold">Ledger</p>
+                <p class="text-sm text-gray-500">ledger.com</p>
+            </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-4 flex items-center space-x-3">
+            <img src="walletconnect-logo.png" alt="Wallet Connect" class="w-12 h-12" />
+            <div>
+                <p class="font-semibold">Wallet Connect</p>
+                <p class="text-sm text-gray-500">walletconnect.com</p>
+            </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-4 flex items-center space-x-3">
+            <img src="metamask-logo.png" alt="Metamask" class="w-12 h-12" />
+            <div>
+                <p class="font-semibold">Metamask</p>
+                <p class="text-sm text-gray-500">metamask.io</p>
+            </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-4 flex items-center space-x-3">
+            <img src="binance-logo.png" alt="Binance Chain Wallet" class="w-12 h-12" />
+            <div>
+                <p class="font-semibold">Binance Chain Wallet</p>
+                <p class="text-sm text-gray-500">binance.com</p>
+            </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-4 flex items-center space-x-3">
+            <img src="xaman-logo.png" alt="Xaman Wallet" class="w-12 h-12" />
+            <div>
+                <p class="font-semibold">Xaman Wallet</p>
+                <p class="text-sm text-gray-500">xaman.app</p>
+            </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-4 flex items-center space-x-3">
+            <img src="dcent-logo.png" alt="D'Cent Wallet" class="w-12 h-12" />
+            <div>
+                <p class="font-semibold">D'Cent Wallet</p>
+                <p class="text-sm text-gray-500">dcentwallet.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

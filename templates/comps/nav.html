@@ -1,0 +1,32 @@
+<link rel="shortcut icon" href="https://flarentwork.com/wp-content/themes/flare/assets/images/favicon/apple-icon-57x57.png" type="image/x-icon">
+<!-- Navbar -->
+<div id="nav" class="fixed bg-white z-10 top-0 left-0 w-full text-white flex items-center justify-between px-10 py-6 shadow-md z-50">
+    <div>
+        <img src="https://flarentwork.com/wp-content/uploads/Artboard-1-1.svg" alt="Logo" class="h-10">
+    </div>
+    <div class="hidden md:flex space-x-6">
+        <a href="#" class="text-gray-900">Learn</a>
+        <a href="#" class="text-gray-900">Build</a>
+        <a href="#" class="text-gray-900">Use</a>
+        <a href="#" class="text-gray-900">Operate</a>
+        <a href="#" class="text-gray-900">Connect</a>
+        <a href="#" class="text-gray-900">News</a>
+    </div>
+    <div>
+        <a href="#" class="hidden md:block bg-white text-gray-900 px-4 py-2 border rounded-lg hover:bg-gray-100 transition">
+            Connect Wallet
+        </a>
+    </div>
+    <div class="md:hidden">
+        <button id="menu-btn" class="text-pink-900 text-[25px] bold focus:outline-none">
+            ☰
+        </button>
+    </div>
+</div>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    document.getElementById('menu-btn').addEventListener('click', function() {
+        const dropdown = document.getElementById('dropdown-top-nav');
+        dropdown.classList.toggle('hidden');
+    });
+</script>
