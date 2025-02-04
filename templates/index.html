@@ -35,7 +35,7 @@
                         <a href="flare-101/index.html" class="px-6 py-3 border border-black text-black hover:bg-black hover:text-white transition rounded-lg">
                             Learn More
                         </a>
-                        <a href="/connect.html" class="px-6 py-3 bg-pink-500 text-white hover:bg-red-700 transition rounded-lg">
+                        <a href="{% url "connect" %}" class="px-6 py-3 bg-pink-500 text-white hover:bg-red-700 transition rounded-lg">
                             Connect
                         </a>
                     </div>
@@ -158,24 +158,24 @@
                         <p class="text-sm text-gray-600">Trustlessly access value and users from other chains</p>
                     </div>
                     <div class="flex flex-col items-center text-center p-6 shadow-md rounded-lg w-full md:w-[18%] bg-white">
-                        <img class="w-[80px] mb-3" src="https://flarentwork.com/wp-content/uploads/Bridging-1-1.svg" alt="Icon"/>
-                        <h3 class="text-lg font-semibold text-gray-800">Decentralized Bridging</h3>
-                        <p class="text-sm text-gray-600">Trustlessly access value and users from other chains</p>
+                        <img class="w-[80px] mb-3" src="https://flarentwork.com/wp-content/uploads/state_aquisition-1-1.svg" alt="Icon"/>
+                        <h3 class="text-lg font-semibold text-gray-800">State Acquisition</h3>
+                        <p class="text-sm text-gray-600">Build dapps and protocols that utilize state from any connected chain.</p>
                     </div>
                     <div class="flex flex-col items-center text-center p-6 shadow-md rounded-lg w-full md:w-[18%] bg-white">
-                        <img class="w-[80px] mb-3" src="https://flarentwork.com/wp-content/uploads/Bridging-1-1.svg" alt="Icon"/>
-                        <h3 class="text-lg font-semibold text-gray-800">Decentralized Bridging</h3>
-                        <p class="text-sm text-gray-600">Trustlessly access value and users from other chains</p>
+                        <img class="w-[80px] mb-3" src="https://flarentwork.com/wp-content/uploads/web2_connectivity-1.svg" alt="Icon"/>
+                        <h3 class="text-lg font-semibold text-gray-800">Web2 connectivity</h3>
+                        <p class="text-sm text-gray-600">Trustlessly trigger smart contracts with data from web2 APIs.</p>
                     </div>
                     <div class="flex flex-col items-center text-center p-6 shadow-md rounded-lg w-full md:w-[18%] bg-white">
-                        <img class="w-[80px] mb-3" src="https://flarentwork.com/wp-content/uploads/Bridging-1-1.svg" alt="Icon"/>
-                        <h3 class="text-lg font-semibold text-gray-800">Decentralized Bridging</h3>
-                        <p class="text-sm text-gray-600">Trustlessly access value and users from other chains</p>
+                        <img class="w-[80px] mb-3" src="https://flarentwork.com/wp-content/uploads/data_feeds-1.svg" alt="Icon"/>
+                        <h3 class="text-lg font-semibold text-gray-800">Enshrined Oracles</h3>
+                        <p class="text-sm text-gray-600">Access all the data you need, knowing Flare's oracles are secured at the network layer.</p>
                     </div>                                                                                
                     <div class="flex flex-col items-center text-center p-6 shadow-md rounded-lg w-full md:w-[18%] bg-white">
-                        <img class="w-[80px] mb-3" src="https://flarentwork.com/wp-content/uploads/Bridging-1-1.svg" alt="Icon"/>
-                        <h3 class="text-lg font-semibold text-gray-800">Decentralized Bridging</h3>
-                        <p class="text-sm text-gray-600">Trustlessly access value and users from other chains</p>
+                        <img class="w-[80px] mb-3" src="https://flarentwork.com/wp-content/uploads/scalable_smart_contracts-1-1.svg" alt="Icon"/>
+                        <h3 class="text-lg font-semibold text-gray-800">Data Access For Free</h3>
+                        <p class="text-sm text-gray-600">Build on Flare with a broad range of data feeds available on-chain for free.</p>
                     </div>                        
                 </div>
             </section>
@@ -188,15 +188,15 @@
                 <div class="flex flex-col md:flex-row space-y-5 md:space-y-0 md:justify-between w-full">
                     <!-- News Item 1 -->
                     <div class="flex flex-col items-center text-center p-5 w-full md:w-[30%] bg-white rounded-lg">
-                        <img class="w-full mb-3 rounded-md" src="https://flarentwork.com/wp-content/uploads/FTSO_square-1200x1200-1.png" alt="News Image"/>
-                        <h3 class="text-lg font-semibold text-gray-800">Decentralized Bridging</h3>
+                        <img class="w-full mb-3 rounded-md" src="https://flarentwork.com/wp-content/uploads/FTSOv2_square-1200x1200-1.png" alt="News Image"/>
+                        <h3 class="text-lg font-semibold text-gray-800">FTSOv2: More data, delivered faster</h3>
                         <a href="#" class="text-blue-600 font-medium mt-2">FLARE UPDATES</a>
                     </div>    
             
                     <!-- News Item 2 -->
                     <div class="flex flex-col items-center text-center shadow-md p-5 w-full md:w-[30%] bg-white rounded-lg">
-                        <img class="w-full mb-3 rounded-md" src="https://flarentwork.com/wp-content/uploads/FTSO_square-1200x1200-1.png" alt="News Image"/>
-                        <h3 class="text-lg font-semibold text-gray-800">Decentralized Bridging</h3>
+                        <img class="w-full mb-3 rounded-md" src="https://flarentwork.com/wp-content/uploads/1920x1920fassets.png" alt="News Image"/>
+                        <h3 class="text-lg font-semibold text-gray-800">FAssets Open Beta Relaunches with New Features</h3>
                         <a href="#" class="text-blue-600 font-medium mt-2">FLARE UPDATES</a>
                     </div>  
             
@@ -249,11 +249,23 @@
                         </div>
                 
                         <div class="flex flex-col cqw text-center shrink-0 w-screen md:w-[48%] bg-white rounded-lg"> 
-                            <img class="w-full h-auto" src="https://flarentwork.com/wp-content/uploads/2310_ETH_LDN_15-2-1.jpg" alt="News Image" />
+                            <img class="w-full h-auto" src="https://flarentwork.com/wp-content/uploads/2310_ETH_LDN_9-1-1.jpg" alt="News Image" />
                         </div>
                 
                         <div class="flex flex-col cqw text-center shrink-0 w-screen md:w-[48%] bg-white rounded-lg"> 
-                            <img class="w-full h-auto" src="https://flarentwork.com/wp-content/uploads/2310_ETH_LDN_15-2-1.jpg" alt="News Image" />
+                            <img class="w-full h-auto" src="https://flarentwork.com/wp-content/uploads/JK209426.jpg" alt="News Image" />
+                        </div>
+
+                        <div class="flex flex-col cqw text-center shrink-0 w-screen md:w-[48%] bg-white rounded-lg"> 
+                            <img class="w-full h-auto" src="https://flarentwork.com/wp-content/uploads/image-3.png" alt="News Image" />
+                        </div>
+                
+                        <div class="flex flex-col cqw text-center shrink-0 w-screen md:w-[48%] bg-white rounded-lg"> 
+                            <img class="w-full h-auto" src="https://flarentwork.com/wp-content/uploads/2310_ETH_LDN-1.jpg" alt="News Image" />
+                        </div>
+                
+                        <div class="flex flex-col cqw text-center shrink-0 w-screen md:w-[48%] bg-white rounded-lg"> 
+                            <img class="w-full h-auto" src="https://flarentwork.com/wp-content/uploads/JK209426.jpg" alt="News Image" />
                         </div>
                     </div>
                 </div>
@@ -285,17 +297,6 @@
                 
                 
             </section>
-            
-            
-
-            
-
-
-
-
-
-            
-
             
         </div>
     </div>

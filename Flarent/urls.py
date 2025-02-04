@@ -20,5 +20,6 @@ from flare import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home')
+    path('', views.home, name='home'),
+    path('connect/', views.connect, name='connect')   
 ]
