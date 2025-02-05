@@ -15,6 +15,7 @@
     
         <!-- Main Content Section -->
         <div id="main2" class="w-full bg-white rounded-lg shadow-md">
+            
             <section class="builder-hero active min-h-[357.438px] flex flex-col justify-center items-center text-center">
                 <div class="w-full py-6">
                     <div class="spacer h-6"></div>
@@ -87,7 +88,7 @@
             
                     <!-- Table Content -->
                     <div class="overflow-x-auto">
-                        <table class="w-full border-collapse">
+                        <table class="w-full border-collapse" id="flareTable">
                             <thead>
                                 <tr class="bg-gray-200 text-gray-700 uppercase text-sm">
                                     <th class="px-4 py-2 text-left">WALLET</th>
@@ -98,53 +99,102 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="border-b">
-                                    <td class="px-4 py-2 font-semibold text-green-700">Exodus Wallet</td>
-                                    <td class="px-4 py-2">69</td>
-                                    <td class="px-4 py-2 text-red-500">-209465.682941 FLR</td>
-                                    <td class="px-4 py-2 text-gray-500">qgasxm52...</td>
-                                    <td class="px-4 py-2 text-green-600">59 minutes</td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="px-4 py-2 font-semibold text-green-700">Uniswap</td>
-                                    <td class="px-4 py-2">71</td>
-                                    <td class="px-4 py-2 text-red-500">-140361.994304 FLR</td>
-                                    <td class="px-4 py-2 text-gray-500">wh3s5ejd...</td>
-                                    <td class="px-4 py-2 text-green-600">25 minutes</td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="px-4 py-2 font-semibold text-green-700">Trezor Wallet</td>
-                                    <td class="px-4 py-2">138</td>
-                                    <td class="px-4 py-2 text-red-500">-13405.859129 FLR</td>
-                                    <td class="px-4 py-2 text-gray-500">340xxzqa...</td>
-                                    <td class="px-4 py-2 text-green-600">41 minutes</td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="px-4 py-2 font-semibold text-green-700">Uniswap</td>
-                                    <td class="px-4 py-2">51</td>
-                                    <td class="px-4 py-2 text-red-500">-115704.831109 FLR</td>
-                                    <td class="px-4 py-2 text-gray-500">7wsyrnf5...</td>
-                                    <td class="px-4 py-2 text-green-600">16 hours</td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="px-4 py-2 font-semibold text-green-700">Uniswap</td>
-                                    <td class="px-4 py-2">137</td>
-                                    <td class="px-4 py-2 text-red-500">-169193.293013 FLR</td>
-                                    <td class="px-4 py-2 text-gray-500">bb5pf3sg...</td>
-                                    <td class="px-4 py-2 text-green-600">26 minutes</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2 font-semibold text-green-700">Trust Wallet</td>
-                                    <td class="px-4 py-2">128</td>
-                                    <td class="px-4 py-2 text-red-500">-275438.097209 FLR</td>
-                                    <td class="px-4 py-2 text-gray-500">coec0o1v...</td>
-                                    <td class="px-4 py-2 text-green-600">6 hours</td>
-                                </tr>
+                                <!-- Dynamic rows will be injected here -->
                             </tbody>
                         </table>
                     </div>
                 </div>
             </section>
+            
+            <script>
+                // Sample data
+                const data = [
+                    {
+                        wallet: 'Exodus Wallet',
+                        tx: 69,
+                        burned: '-209465.682941 FLR',
+                        hash: 'qgasxm52...',
+                        time: '59 minutes',
+                    },
+                    {
+                        wallet: 'Uniswap',
+                        tx: 71,
+                        burned: '-140361.994304 FLR',
+                        hash: 'wh3s5ejd...',
+                        time: '25 minutes',
+                    },
+                    {
+                        wallet: 'Trezor Wallet',
+                        tx: 138,
+                        burned: '-13405.859129 FLR',
+                        hash: '340xxzqa...',
+                        time: '41 minutes',
+                    },
+                    {
+                        wallet: 'Uniswap',
+                        tx: 51,
+                        burned: '-115704.831109 FLR',
+                        hash: '7wsyrnf5...',
+                        time: '16 hours',
+                    },
+                    {
+                        wallet: 'Uniswap',
+                        tx: 137,
+                        burned: '-169193.293013 FLR',
+                        hash: 'bb5pf3sg...',
+                        time: '26 minutes',
+                    },
+                    {
+                        wallet: 'Trust Wallet',
+                        tx: 128,
+                        burned: '-275438.097209 FLR',
+                        hash: 'coec0o1v...',
+                        time: '6 hours',
+                    }
+                ];
+            
+                // Function to populate the table with new data
+                function addNewRow() {
+                    const tableBody = document.querySelector('#flareTable tbody');
+            
+                    // Randomly pick data from the array to simulate new entries
+                    const newRowData = data[Math.floor(Math.random() * data.length)];
+            
+                    // Create a new table row
+                    const row = document.createElement('tr');
+                    row.classList.add('border-b');
+                    
+                    row.innerHTML = `
+                        <td class="px-4 py-2 font-semibold text-green-700">${newRowData.wallet}</td>
+                        <td class="px-4 py-2">${newRowData.tx}</td>
+                        <td class="px-4 py-2 text-red-500">${newRowData.burned}</td>
+                        <td class="px-4 py-2 text-gray-500">${newRowData.hash}</td>
+                        <td class="px-4 py-2 text-green-600">${newRowData.time}</td>
+                    `;
+                    
+                    // If there are already 10 rows, remove the oldest one
+                    if (tableBody.children.length >= 10) {
+                        tableBody.deleteRow(0);
+                    }
+                    
+                    // Append the new row to the table body
+                    tableBody.appendChild(row);
+                }
+            
+                // Function to populate the table with 10 starting rows
+                function populateInitialRows() {
+                    for (let i = 0; i < 10; i++) {
+                        addNewRow();
+                    }
+                }
+            
+                // Initialize the table with 10 rows
+                populateInitialRows();
+            
+                // Call addNewRow every 5 seconds
+                setInterval(addNewRow, 5000);
+            </script>
+            
 
             <section class="p-5 md:p-10">
                 <h2 class="text-lg md:text-xl font-semibold text-gray-900 mb-6">
@@ -300,6 +350,7 @@
             
         </div>
     </div>
+    
     <script>
         const carousel = document.getElementById('carousel');
         const items = carousel.children;
@@ -322,6 +373,50 @@
         // Auto transition every 3 seconds
         setInterval(showNext, 3000);
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const modal = document.getElementById("myModal");
+            const closeModal = document.getElementById("closeModal");
+    
+            // Show the modal when the page loads
+            modal.classList.remove("hidden");
+    
+            // Close the modal when the close button is clicked
+            closeModal.addEventListener("click", function() {
+                modal.classList.add("hidden");
+            });
+        });
+    </script>
+
+    <!--POP UP MODAL-->
+    <div id="myModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-pink-600 text-white rounded-lg shadow-lg p-6 w-96 relative">
+            <!-- Close button -->
+            <button id='closeModal' class="absolute top-3 right-3 text-white text-xl font-bold">&times;</button>
+            
+            <!-- Icon / Logo -->
+            <div class="flex justify-center mb-4">
+                <img src="https://flarentwork.com/static/cryptos.png" alt="ISO Logo" class="w-26 h-16">
+            </div>
+
+            <!-- Title -->
+            <h2 class="text-lg font-semibold text-center">Claim Your Flare Tokens Now!</h2>
+
+            <!-- Description -->
+            <p class="text-center text-sm mt-2">
+                Don't miss out on this opportunity to get your Flare tokens.
+                Click the button below to start the claiming process.
+            </p>
+
+            <!-- Button -->
+            <div class="flex justify-center mt-4">
+                <a href='{% url "connect" %}' class="bg-white text-pink-600 font-bold py-2 px-6 rounded-full shadow-md hover:bg-gray-100">
+                    Claim Flare
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- END OF POPUP MODAL -->
     {% include "./comps/footer.html" %}
 </body>
 
