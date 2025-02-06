@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Flare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    {% include "./comps/nav.html" %}
+
+    <!-- Main Section -->
+    <div class="pt-20 flex flex-col md:flex-row min-h-screen">
+        {% include "./comps/sidenav.html" %}
+
+        <!-- Content Area -->
+        <div class="w-full">
+            
+            <!-- Hero Section -->
+            <section class="relative text-center py-24 bg-gradient-to-r from-pink-500 to-red-500 text-white">
+                <div class="absolute top-0 left-0 w-full h-full bg-opacity-30"></div>
+                <h1 class="text-5xl font-bold relative">Using Flare</h1>
+                <p class="mt-4 text-lg max-w-3xl mx-auto relative">
+                    Discover how to interact with Flare’s blockchain, access decentralized data, and leverage its powerful ecosystem for real-world applications.
+                </p>
+            </section>
+
+            <!-- What Can You Do with Flare? -->
+            <section class="py-20 px-12 bg-white">
+                <h2 class="text-4xl font-semibold text-gray-800 text-center">What Can You Do with Flare?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+                    
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-600">🔗 Cross-Chain Transactions</h3>
+                        <p class="mt-2 text-gray-600">
+                            Use Flare’s State Connector to securely transfer assets and data across multiple blockchains.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-600">📊 Real-World Data in Smart Contracts</h3>
+                        <p class="mt-2 text-gray-600">
+                            Flare’s Time Series Oracle (FTSO) enables smart contracts to access live, decentralized data feeds.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-600">🚀 Build & Deploy dApps</h3>
+                        <p class="mt-2 text-gray-600">
+                            Deploy Ethereum-compatible smart contracts and dApps on Flare’s high-performance network.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-600">💰 DeFi & Staking</h3>
+                        <p class="mt-2 text-gray-600">
+                            Earn rewards by participating in Flare’s staking ecosystem and DeFi applications.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-600">🎭 NFTs & Digital Assets</h3>
+                        <p class="mt-2 text-gray-600">
+                            Mint and trade NFTs with decentralized access to on-chain and off-chain data.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-600">⚡ Secure & Low-Cost Transactions</h3>
+                        <p class="mt-2 text-gray-600">
+                            Benefit from Flare’s fast finality and low transaction fees compared to traditional blockchains.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- How to Use Flare -->
+            <section class="py-20 px-12 bg-gray-50">
+                <h2 class="text-4xl font-semibold text-center text-gray-800">How to Use Flare</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
+
+                    <div class="p-6 rounded-lg shadow-lg bg-white border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-semibold text-pink-600">1. Connect Your Wallet</h3>
+                        <p class="mt-2 text-gray-600">
+                            Use MetaMask or a Flare-compatible wallet to interact with the network.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-lg shadow-lg bg-white border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-semibold text-pink-600">2. Claim & Use FLR Tokens</h3>
+                        <p class="mt-2 text-gray-600">
+                            Get FLR tokens to pay for transactions, stake, or interact with dApps.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-lg shadow-lg bg-white border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-semibold text-pink-600">3. Start Using dApps</h3>
+                        <p class="mt-2 text-gray-600">
+                            Explore the growing ecosystem of Flare-based applications and services.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Tools & Resources -->
+            <section class="py-20 px-12">
+                <h2 class="text-4xl font-semibold text-gray-800 text-center">Tools & Resources</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+                    
+                    <div class="p-6 bg-white rounded-lg shadow-md border-t-4 border-pink-500">
+                        <h3 class="text-2xl font-semibold text-pink-600">📖 Flare Docs</h3>
+                        <p class="mt-2 text-gray-600">Comprehensive guides and API references for developers and users.</p>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-lg shadow-md border-t-4 border-pink-500">
+                        <h3 class="text-2xl font-semibold text-pink-600">🔗 Block Explorer</h3>
+                        <p class="mt-2 text-gray-600">Track transactions, accounts, and smart contracts on Flare.</p>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-lg shadow-md border-t-4 border-pink-500">
+                        <h3 class="text-2xl font-semibold text-pink-600">💬 Community Support</h3>
+                        <p class="mt-2 text-gray-600">Join discussions on Discord, Twitter, and forums.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Call-to-Action -->
+            <section class="text-center py-20 bg-pink-600 text-white">
+                <h2 class="text-4xl font-bold">Start Using Flare Today</h2>
+                <p class="mt-4 text-lg">
+                    Join the Flare ecosystem and explore the power of decentralized data and smart contracts.
+                </p>
+                <a href="#" class="mt-6 inline-block px-6 py-3 text-lg bg-white text-pink-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 transition">
+                    Explore dApps
+                </a>
+            </section>
+
+        </div>
+    </div>
+
+    {% include "./comps/footer.html" %}
+
+</body>
+</html>

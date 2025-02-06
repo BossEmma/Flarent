@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operate on Flare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+    {% include "./comps/nav.html" %}
+
+    <!-- Main Section -->
+    <div class="pt-20 flex flex-col md:flex-row min-h-screen">
+        {% include "./comps/sidenav.html" %}
+
+        <!-- Content Area -->
+        <div class="w-full">
+            
+            <!-- Hero Section -->
+            <section class="relative text-center py-24 bg-gradient-to-r from-gray-800 to-black text-pink-400">
+                <div class="absolute top-0 left-0 w-full h-full bg-opacity-40"></div>
+                <h1 class="text-5xl font-bold relative">Operate on Flare</h1>
+                <p class="mt-4 text-lg max-w-3xl mx-auto relative">
+                    Learn how to run nodes, manage validators, and contribute to the security and scalability of the Flare blockchain.
+                </p>
+            </section>
+
+            <!-- How to Operate on Flare -->
+            <section class="py-20 px-12 bg-gray-800">
+                <h2 class="text-4xl font-semibold text-center text-white">How to Operate on Flare</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
+                    
+                    <div class="p-6 bg-gray-700 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-400">🖥️ Run a Node</h3>
+                        <p class="mt-2 text-gray-300">
+                            Deploy and manage a Flare node to participate in network validation and support the ecosystem.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-gray-700 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-400">⚖️ Become a Validator</h3>
+                        <p class="mt-2 text-gray-300">
+                            Stake FLR tokens and help validate transactions while securing the network.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-gray-700 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-400">🔧 Maintain Infrastructure</h3>
+                        <p class="mt-2 text-gray-300">
+                            Monitor network performance, optimize resource usage, and ensure uptime.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Tools for Operators -->
+            <section class="py-20 px-12 bg-gray-900">
+                <h2 class="text-4xl font-semibold text-center text-white">Tools for Operators</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+
+                    <div class="p-6 bg-gray-800 rounded-lg shadow-md border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-semibold text-pink-400">📡 Node Monitoring</h3>
+                        <p class="mt-2 text-gray-300">Track node performance, uptime, and security with real-time monitoring tools.</p>
+                    </div>
+
+                    <div class="p-6 bg-gray-800 rounded-lg shadow-md border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-semibold text-pink-400">📜 Governance & Voting</h3>
+                        <p class="mt-2 text-gray-300">Participate in on-chain governance decisions to influence the future of Flare.</p>
+                    </div>
+
+                    <div class="p-6 bg-gray-800 rounded-lg shadow-md border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-semibold text-pink-400">🔍 Flare Explorer</h3>
+                        <p class="mt-2 text-gray-300">Analyze transactions, validators, and network health.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Benefits of Operating a Node -->
+            <section class="py-20 px-12 bg-gray-800">
+                <h2 class="text-4xl font-semibold text-white text-center">Why Operate on Flare?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
+                    
+                    <div class="p-6 bg-gray-700 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-400">💰 Earn Rewards</h3>
+                        <p class="mt-2 text-gray-300">
+                            Receive FLR rewards for securing and validating the network.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-gray-700 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-400">🌍 Decentralization</h3>
+                        <p class="mt-2 text-gray-300">
+                            Contribute to a trustless, decentralized infrastructure for Web3 applications.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-gray-700 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-400">⚡ Network Stability</h3>
+                        <p class="mt-2 text-gray-300">
+                            Help maintain fast, low-cost transactions for users and developers.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Call-to-Action -->
+            <section class="text-center py-20 bg-pink-500 text-gray-900">
+                <h2 class="text-4xl font-bold">Start Operating on Flare</h2>
+                <p class="mt-4 text-lg">
+                    Deploy a node, stake FLR, and contribute to a decentralized future.
+                </p>
+                <a href="#" class="mt-6 inline-block px-6 py-3 text-lg bg-white text-pink-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 transition">
+                    Become an Operator
+                </a>
+            </section>
+
+        </div>
+    </div>
+
+    {% include "./comps/footer.html" %}
+
+</body>
+</html>

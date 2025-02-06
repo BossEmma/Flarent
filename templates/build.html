@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build with Flare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    {% include "./comps/nav.html" %}
+
+    <!-- Full-Width Main Wrapper -->
+    <div class="flex flex-col md:flex-row pt-20 min-h-screen">
+        {% include "./comps/sidenav.html" %}
+
+        <!-- Main Content (No Container) -->
+        <div id="main2" class="w-full bg-white">
+
+            <!-- Hero Section -->
+            <section class="bg-gradient-to-r from-pink-500 to-red-500 text-white text-center py-20">
+                <h1 class="text-5xl font-bold">Build on Flare</h1>
+                <p class="mt-4 text-lg max-w-3xl mx-auto">
+                    Unlock the power of decentralized data and build scalable, real-world applications on Flare.
+                </p>
+            </section>
+
+            <!-- Why Build on Flare? -->
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 py-20 px-12">
+                <div>
+                    <h2 class="text-4xl font-semibold text-gray-800">Why Build on Flare?</h2>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Flare provides a scalable, interoperable, and developer-friendly ecosystem to create dApps with real-world data integration. Whether you're building in **DeFi, NFTs, supply chain, gaming, or identity solutions**, Flare's infrastructure ensures security, efficiency, and cost-effectiveness.
+                    </p>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Its **Ethereum Virtual Machine (EVM) compatibility** allows easy migration of existing Solidity-based smart contracts while **Flare Time Series Oracle (FTSO)** and **State Connector** unlock access to secure off-chain data.
+                    </p>
+                </div>
+                <div>
+                    <img src="{% static 'images/build-with-flare.png' %}" alt="Build with Flare" class="w-full rounded-lg shadow-md">
+                </div>
+            </section>
+
+            <!-- Getting Started -->
+            <section class="py-20 px-12 bg-gray-50">
+                <h2 class="text-4xl font-semibold text-center text-gray-800">How to Get Started</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white">
+                        <h3 class="text-2xl font-semibold text-pink-600">1. Set Up Your Environment</h3>
+                        <p class="mt-2 text-gray-600">
+                            Install **Node.js**, **Truffle**, and **Hardhat**. Use **Metamask** to connect to the Flare network.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white">
+                        <h3 class="text-2xl font-semibold text-pink-600">2. Deploy Your First Smart Contract</h3>
+                        <p class="mt-2 text-gray-600">
+                            Write Solidity contracts and deploy them using Hardhat or Remix IDE.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white">
+                        <h3 class="text-2xl font-semibold text-pink-600">3. Integrate Data from Flare</h3>
+                        <p class="mt-2 text-gray-600">
+                            Use the **Flare Time Series Oracle (FTSO)** or **State Connector** to integrate off-chain data.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Developer Resources -->
+            <section class="py-20 px-12">
+                <h2 class="text-4xl font-semibold text-gray-800 text-center">Developer Resources</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white">
+                        <h3 class="text-2xl font-semibold text-pink-600">Flare Testnet</h3>
+                        <p class="mt-2 text-gray-600">
+                            Start building on the Flare Testnet and experiment before deploying to the mainnet.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white">
+                        <h3 class="text-2xl font-semibold text-pink-600">Flare API & SDK</h3>
+                        <p class="mt-2 text-gray-600">
+                            Use Flare’s API and developer tools to interact with smart contracts and data sources.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white">
+                        <h3 class="text-2xl font-semibold text-pink-600">Documentation</h3>
+                        <p class="mt-2 text-gray-600">
+                            Read the official documentation for tutorials, guides, and API references.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white">
+                        <h3 class="text-2xl font-semibold text-pink-600">Community & Support</h3>
+                        <p class="mt-2 text-gray-600">
+                            Join Flare’s developer community on Discord, GitHub, and forums for support.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call-to-Action (CTA) -->
+            <section class="text-center py-20 bg-pink-600 text-white">
+                <h2 class="text-4xl font-bold">Start Building Today</h2>
+                <p class="mt-4 text-lg">
+                    Join a growing ecosystem of developers innovating with Flare’s blockchain technology.
+                </p>
+                <a href="#" class="mt-6 inline-block px-6 py-3 text-lg bg-white text-pink-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 transition">
+                    Explore Docs
+                </a>
+            </section>
+        </div>
+    </div>
+
+    {% include "./comps/footer.html" %}
+
+</body>
+</html>

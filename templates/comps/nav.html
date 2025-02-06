@@ -1,16 +1,17 @@
 <link rel="shortcut icon" href="https://flarentwork.com/wp-content/themes/flare/assets/images/favicon/apple-icon-57x57.png" type="image/x-icon">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <!-- Navbar -->
 <div id="nav" class="fixed bg-white z-10 top-0 left-0 w-full text-white flex items-center justify-between px-10 py-6 shadow-md z-50">
     <div>
         <img src="https://flarentwork.com/wp-content/uploads/Artboard-1-1.svg" alt="Logo" class="h-10">
     </div>
     <div class="hidden md:flex space-x-6">
-        <a href="#" class="text-gray-900">Learn</a>
-        <a href="#" class="text-gray-900">Build</a>
-        <a href="#" class="text-gray-900">Use</a>
-        <a href="#" class="text-gray-900">Operate</a>
-        <a href="#" class="text-gray-900">Connect</a>
-        <a href="#" class="text-gray-900">News</a>
+        <a href="{% url "learn" %}" class="text-gray-900">Learn</a>
+        <a href="{% url "build" %}" class="text-gray-900">Build</a>
+        <a href="{% url "use" %}" class="text-gray-900">Use</a>
+        <a href="{% url "operate" %}" class="text-gray-900">Operate</a>
+        <a href="{% url "connect" %}" class="text-gray-900">Connect</a>
+        <a href="{% url "news" %}" class="text-gray-900">News</a>
     </div>
     <div>
         <a href="{% url "connect" %}" class="hidden md:block bg-white text-gray-900 px-4 py-2 border rounded-lg hover:bg-gray-100 transition">
@@ -23,6 +24,10 @@
         </button>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
     document.getElementById('menu-btn').addEventListener('click', function() {

@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flare - The Blockchain for Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    {% include "./comps/nav.html" %}
+
+    <!-- Full-Width Main Wrapper -->
+    <div class="flex flex-col md:flex-row pt-20 min-h-screen">
+        {% include "./comps/sidenav.html" %}
+
+        <!-- Main Content (No Container) -->
+        <div id="main2" class="w-full bg-white">
+
+            <!-- Hero Section -->
+            <section class="bg-gradient-to-r from-pink-500 to-red-500 text-white text-center py-20" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-5xl font-bold">Flare: The Blockchain for Data</h1>
+                <p class="mt-4 text-lg max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                    A next-generation Layer 1 blockchain that enables decentralized access to high-integrity data.
+                </p>
+            </section>
+
+            <!-- What is Flare? -->
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 py-20 px-12" data-aos="fade-up" data-aos-duration="1000">
+                <div>
+                    <h2 class="text-4xl font-semibold text-gray-800">What is Flare?</h2>
+                    <p class="mt-4 text-gray-600 leading-relaxed" data-aos="fade-up" data-aos-duration="1000">
+                        Flare is a Layer 1 blockchain with advanced data acquisition capabilities. It enables developers to access decentralized, high-integrity data from other chains and the internet, allowing the creation of innovative decentralized applications.
+                    </p>
+                    <p class="mt-4 text-gray-600 leading-relaxed" data-aos="fade-up" data-aos-duration="1000">
+                        As an Ethereum Virtual Machine (EVM) compatible chain, Flare supports Solidity-based applications, enabling seamless migration and deployment across multiple blockchain ecosystems.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <img src="{% static 'images/flare-blockchain.png' %}" alt="Flare Blockchain" class="w-full rounded-lg shadow-md">
+                </div>
+            </section>
+
+            <!-- Problem Flare Solves -->
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 py-20 px-12 bg-gray-50" data-aos="fade-up" data-aos-duration="1000">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <img src="{% static 'images/problem-solving.png' %}" alt="Flare Solving Problems" class="w-full rounded-lg shadow-md">
+                </div>
+                <div>
+                    <h2 class="text-4xl font-semibold text-gray-800">What problem is Flare solving?</h2>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Current blockchain applications are limited by a lack of decentralized data sources, restricting their real-world use cases. Most existing dapps focus on financial speculation rather than utility.
+                    </p>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Flare addresses this by providing developers with secure, trustless access to off-chain data, unlocking new opportunities in DeFi, gaming, insurance, and more.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="py-20 px-12" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-4xl font-semibold text-gray-800 text-center">Key Features of Flare</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white" data-aos="fade-up" data-aos-duration="1000">
+                        <h3 class="text-2xl font-semibold text-pink-600">Decentralized Data Feeds</h3>
+                        <p class="mt-2 text-gray-600">
+                            Secure, decentralized oracles allow dapps to access real-world data without centralized points of failure.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white" data-aos="fade-up" data-aos-duration="1000">
+                        <h3 class="text-2xl font-semibold text-pink-600">Interoperability</h3>
+                        <p class="mt-2 text-gray-600">
+                            Flare supports seamless integration between multiple blockchain networks, enhancing dapp scalability.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white" data-aos="fade-up" data-aos-duration="1000">
+                        <h3 class="text-2xl font-semibold text-pink-600">Scalability & Efficiency</h3>
+                        <p class="mt-2 text-gray-600">
+                            Low fees and high-speed transactions make Flare ideal for large-scale applications.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Use Cases -->
+            <section class="py-20 px-12 bg-gray-50" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-4xl font-semibold text-center text-gray-800">Real-World Applications</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white" data-aos="fade-up" data-aos-duration="1000">
+                        <h3 class="text-2xl font-semibold text-pink-600">Decentralized Finance (DeFi)</h3>
+                        <p class="mt-2 text-gray-600">
+                            Flare enhances DeFi by providing real-time market data, stablecoin solutions, and cross-chain assets.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white" data-aos="fade-up" data-aos-duration="1000">
+                        <h3 class="text-2xl font-semibold text-pink-600">Gaming & NFTs</h3>
+                        <p class="mt-2 text-gray-600">
+                            Enables blockchain games and NFTs to integrate real-world events and cross-chain interactions.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white" data-aos="fade-up" data-aos-duration="1000">
+                        <h3 class="text-2xl font-semibold text-pink-600">Supply Chain & Logistics</h3>
+                        <p class="mt-2 text-gray-600">
+                            Flare supports transparent and decentralized supply chain solutions for enterprises.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-sm border-l-4 border-pink-500 bg-white" data-aos="fade-up" data-aos-duration="1000">
+                        <h3 class="text-2xl font-semibold text-pink-600">Decentralized Identity</h3>
+                        <p class="mt-2 text-gray-600">
+                            Provides self-sovereign identity solutions, ensuring privacy and security in digital interactions.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call-to-Action (CTA) -->
+            <section class="text-center py-20 bg-pink-600 text-white" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-4xl font-bold">Start Building on Flare Today</h2>
+                <p class="mt-4 text-lg">
+                    Join the future of decentralized applications with Flare’s innovative blockchain technology.
+                </p>
+                <a href="#" class="mt-6 inline-block px-6 py-3 text-lg bg-white text-pink-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 transition">
+                    Get Started
+                </a>
+            </section>
+        </div>
+    </div>
+
+    {% include "./comps/footer.html" %}
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flare News & Updates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+
+    {% include "./comps/nav.html" %}
+
+    <!-- Main Section -->
+    <div class="pt-20 flex flex-col md:flex-row min-h-screen">
+        {% include "./comps/sidenav.html" %}
+
+        <!-- Content Area -->
+        <div class="w-full">
+            
+            <!-- Hero Section -->
+            <section class="relative text-center py-24 bg-pink-500 text-white">
+                <div class="absolute top-0 left-0 w-full h-full bg-opacity-40"></div>
+                <h1 class="text-5xl font-bold relative">Flare News</h1>
+                <p class="mt-4 text-lg max-w-3xl mx-auto relative">
+                    Stay up to date with the latest developments, updates, and community insights from Flare.
+                </p>
+            </section>
+
+            <!-- Latest News Section -->
+            <section class="py-20 px-12 bg-gray-100">
+                <h2 class="text-4xl font-semibold text-center">Latest News</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+                    
+                    <div class="p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-600">🚀 Flare Testnet Upgrade</h3>
+                        <p class="mt-2 text-gray-600">
+                            The latest testnet upgrade introduces improved data relay mechanisms and reduced latency for smart contract interactions.
+                        </p>
+                        <a href="#" class="mt-3 inline-block text-pink-500 font-semibold">Read More →</a>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-600">💡 New Developer Tools</h3>
+                        <p class="mt-2 text-gray-600">
+                            Flare has released new SDKs to make development faster and more efficient. Explore the updated documentation today!
+                        </p>
+                        <a href="#" class="mt-3 inline-block text-pink-500 font-semibold">Read More →</a>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-pink-600">🌎 Flare Expands Partnerships</h3>
+                        <p class="mt-2 text-gray-600">
+                            Major blockchain projects are now integrating with Flare, bringing more utility and adoption to the network.
+                        </p>
+                        <a href="#" class="mt-3 inline-block text-pink-500 font-semibold">Read More →</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Community Highlights -->
+            <section class="py-20 px-12 bg-white">
+                <h2 class="text-4xl font-semibold text-center">Community Highlights</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-semibold text-pink-600">🔥 Hackathon Winners Announced</h3>
+                        <p class="mt-2 text-gray-700">Meet the top projects from the latest Flare hackathon and see how they're pushing innovation forward.</p>
+                        <a href="#" class="mt-3 inline-block text-pink-500 font-semibold">View Winners →</a>
+                    </div>
+
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-semibold text-pink-600">📢 Community AMA Recap</h3>
+                        <p class="mt-2 text-gray-700">Missed the last AMA? Read the recap of key insights from the Flare team and developers.</p>
+                        <a href="#" class="mt-3 inline-block text-pink-500 font-semibold">Read Recap →</a>
+                    </div>
+
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-semibold text-pink-600">🏆 Top Contributors of the Month</h3>
+                        <p class="mt-2 text-gray-700">Shoutout to the most active community members helping Flare grow and evolve.</p>
+                        <a href="#" class="mt-3 inline-block text-pink-500 font-semibold">See List →</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Call-to-Action -->
+            <section class="text-center py-20 bg-pink-500 text-white">
+                <h2 class="text-4xl font-bold">Get Involved</h2>
+                <p class="mt-4 text-lg">
+                    Join the discussion, contribute to Flare, and be part of the decentralized revolution.
+                </p>
+                <a href="#" class="mt-6 inline-block px-6 py-3 text-lg bg-white text-pink-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 transition">
+                    Join the Community
+                </a>
+            </section>
+
+        </div>
+    </div>
+
+    {% include "./comps/footer.html" %}
+
+</body>
+</html>

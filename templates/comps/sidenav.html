@@ -1,11 +1,11 @@
-<div id="dropdown-top-nav" class="w-full h-[100dvh] fixed flex flex-col md:hidden space-y-4 bg-white p-10 hidden shadow-md rounded-lg">
+<div id="dropdown-top-nav" class="w-full z-10 h-[100dvh] fixed flex flex-col md:hidden space-y-4 bg-white p-10 hidden shadow-md rounded-lg">
     <div class="flex flex-col space-y-4">
-        <a href="#" class="text-gray-900 hover:text-pink-600 text-[22px]">Learn</a>
-        <a href="#" class="text-gray-900 hover:text-pink-600 text-[22px]">Build</a>
-        <a href="#" class="text-gray-900 hover:text-pink-600 text-[22px]">Use</a>
-        <a href="#" class="text-gray-900 hover:text-pink-600 text-[22px]">Operate</a>
+        <a href="{% url "learn" %}" class="text-gray-900 hover:text-pink-600 text-[22px]">Learn</a>
+        <a href="{% url "build" %}" class="text-gray-900 hover:text-pink-600 text-[22px]">Build</a>
+        <a href="{% url "use" %}" class="text-gray-900 hover:text-pink-600 text-[22px]">Use</a>
+        <a href="{% url "operate" %}" class="text-gray-900 hover:text-pink-600 text-[22px]">Operate</a>
         <a href="{% url "connect" %}" class="text-gray-900 hover:text-pink-600 text-[22px]">Connect</a>
-        <a href="#" class="text-gray-900 hover:text-pink-600 text-[22px]">News</a>
+        <a href="{% url "news" %}" class="text-gray-900 hover:text-pink-600 text-[22px]">News</a>
     </div>
     <div class="w-[100%] pt-[50px] flex align-center justify-center">
         <a href="{% url "connect" %}" class="w-full bg-gray-800 text-white text-center px-4 py-4 rounded-lg hover:bg-blue-600 transition">
