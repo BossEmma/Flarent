@@ -11,118 +11,295 @@
     <h1 class="text-2xl font-bold text-gray-900 p-6">Select a Wallet</h1>
     <div class="w-24 h-1 bg-pink-500 my-2"></div>
 
+    <input type="text" id="walletSearch" placeholder="Search for a wallet..." class="w-[90%] max-w-md p-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500 mt-4">
+
     <!-- Wallet Grid -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-4 w-full p-6">
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Ledger', 'https://flarentwork.com/static/logo/images.png')">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Ledger', 'https://flarentwork.com/static/logo/images.png')" data-name="Ledger">
             <img src="https://flarentwork.com/static/logo/images.png" alt="Ledger" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Ledger</p>
                 <p class="text-sm text-gray-500">ledger.com</p>
             </div>
         </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Wallet Connect', 'https://flarentwork.com/static/logo/walle.jpg')">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Wallet Connect', 'https://flarentwork.com/static/logo/walle.jpg')" data-name="Wallet Connect">
             <img src="https://flarentwork.com/static/logo/walle.jpg" alt="Metamask" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Wallet Connect</p>
                 <p class="text-sm text-gray-500">walletconnect.com</p>
             </div>
         </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Metamask', 'https://flarentwork.com/static/logo/metamask.jpg')">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Metamask', 'https://flarentwork.com/static/logo/metamask.jpg')" data-name="Metamask">
             <img src="https://flarentwork.com/static/logo/metamask.jpg" alt="Metamask" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Metamask</p>
                 <p class="text-sm text-gray-500">metamask.io</p>
             </div>
         </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Binance Chain Wallet', 'https://flarentwork.com/static/logo/binance.png')">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Binance Chain Wallet', 'https://flarentwork.com/static/logo/binance.png')" data-name="Binance Chain Wallet">
             <img src="https://flarentwork.com/static/logo/binance.png" alt="Ledger" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Binance Chain Wallet</p>
                 <p class="text-sm text-gray-500">binance.com</p>
             </div>
         </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Xaman', 'https://flarentwork.com/static/logo/xaman.webp')">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Xaman', 'https://flarentwork.com/static/logo/xaman.webp')" data-name="Xaman Wallet">
             <img src="https://flarentwork.com/static/logo/xaman.webp" alt="Metamask" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Xaman Wallet</p>
                 <p class="text-sm text-gray-500">xaman.app</p>
             </div>
         </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('D'Cent Wallet', 'https://flarentwork.com/static/logo/y-300x300.png')">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('D'Cent Wallet', 'https://flarentwork.com/static/logo/y-300x300.png')" data-name="D'Cent Wallet">
             <img src="https://flarentwork.com/static/logo/y-300x300.png" alt="Ledger" class="w-12 h-12">
             <div>
                 <p class="font-semibold">D'Cent Wallet</p>
                 <p class="text-sm text-gray-500">dcentwallet.com</p>
             </div>
         </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Arculus', 'https://flarentwork.com/static/logo/arculus.png')">
-            <img src="https://flarentwork.com/static/logo/arculus.png" alt="Metamask" class="w-12 h-12">
-            <div>
-                <p class="font-semibold">Arculus</p>
-                <p class="text-sm text-gray-500">getarculus.com</p>
-            </div>
-        </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Bitfrost', 'https://flarentwork.com/static/logo/bitfrost.jpeg')">
-            <img src="https://flarentwork.com/static/logo/bitfrost.jpeg" alt="Ledger" class="w-12 h-12">
-            <div>
-                <p class="font-semibold">Bitfrost</p>
-                <p class="text-sm text-gray-500">bitfrost.io</p>
-            </div>
-        </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Ballet Wallet', 'https://flarentwork.com/static/logo/ballet.png')">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Ballet Wallet', 'https://flarentwork.com/static/logo/ballet.png')" data-name="Ballet Wallet">
             <img src="https://flarentwork.com/static/logo/ballet.png" alt="Metamask" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Ballet Wallet</p>
                 <p class="text-sm text-gray-500">ballet.com</p>
             </div>
         </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Tangem Wallet', 'https://flarentwork.com/static/logo/tangem.png')">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Tangem Wallet', 'https://flarentwork.com/static/logo/tangem.png')" data-name="Tangem Wallet">
             <img src="https://flarentwork.com/static/logo/tangem.png" alt="Ledger" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Tangem Wallet</p>
                 <p class="text-sm text-gray-500">tangem.com</p>
             </div>
+        </div>        
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Arculus', 'https://flarentwork.com/static/logo/arculus.png')" data-name="Arculus">
+            <img src="https://flarentwork.com/static/logo/arculus.png" alt="Metamask" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Arculus</p>
+                <p class="text-sm text-gray-500">getarculus.com</p>
+            </div>
         </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Polygon Wallet', 'https://flarentwork.com/static/logo/polygon.jpg')">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Bitfrost', 'https://flarentwork.com/static/logo/bitfrost.jpeg')" data-name="Bitfrost">
+            <img src="https://flarentwork.com/static/logo/bitfrost.jpeg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Bitfrost</p>
+                <p class="text-sm text-gray-500">bitfrost.io</p>
+            </div>
+        </div>
+
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Polygon Wallet', 'https://flarentwork.com/static/logo/polygon.jpg')" data-name="Polygon Wallet">
             <img src="https://flarentwork.com/static/logo/polygon.jpg" alt="Metamask" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Polygon Wallet</p>
                 <p class="text-sm text-gray-500">polygon.technology</p>
             </div>
         </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Nexo Wallet', 'https://flarentwork.com/static/logo/nexo.png')">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Nexo Wallet', 'https://flarentwork.com/static/logo/nexo.png')" data-name="Nexo Wallet">
             <img src="https://flarentwork.com/static/logo/nexo.png" alt="Ledger" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Nexo Wallet</p>
                 <p class="text-sm text-gray-500">nexo.com</p>
             </div>
         </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Bitpay', 'https://flarentwork.com/static/logo/bitpay.jpg')">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Bitpay', 'https://flarentwork.com/static/logo/bitpay.jpg')" data-name="Bitpay">
             <img src="https://flarentwork.com/static/logo/bitpay.jpg" alt="Metamask" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Bitpay</p>
                 <p class="text-sm text-gray-500">bitpay.com</p>
             </div>
         </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Coinbase', 'https://flarentwork.com/static/logo/coinbase.png')">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Saita Pro', 'https://play-lh.googleusercontent.com/PD6ommpOAofmpJzNt5t4zDoGsloOi3O3EM8GoS0pGa6O5RAmRMvSD2CdY962LmaVwQ=s200')" data-name="Saita Pro">
+            <img src="https://play-lh.googleusercontent.com/PD6ommpOAofmpJzNt5t4zDoGsloOi3O3EM8GoS0pGa6O5RAmRMvSD2CdY962LmaVwQ=s200" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Saita Pro</p>
+                <p class="text-sm text-gray-500">saitapro.com</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Walleth', 'https://flarentwork.com/static/logo/walleth.jpg')" data-name="Walleth">
+            <img src="https://flarentwork.com/static/logo/walleth.jpg" alt="Metamask" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Walleth</p>
+                <p class="text-sm text-gray-500">walleth.org</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Saita Mask', 'https://play-lh.googleusercontent.com/HmXjCZa048la55QfEg_6CJo8Qt7NN0HVUR2cu8uk5gm5BoNhEXulPrgT0Qbnoaf3tHfl')" data-name="Saita Mask">
+            <img src="https://play-lh.googleusercontent.com/HmXjCZa048la55QfEg_6CJo8Qt7NN0HVUR2cu8uk5gm5BoNhEXulPrgT0Qbnoaf3tHfl" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Saita Mask</p>
+                <p class="text-sm text-gray-500">saitamask.org</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Argent', 'https://flarentwork.com/static/logo/argent.jpg')" data-name="Argent">
+            <img src="https://flarentwork.com/static/logo/argent.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Argent</p>
+                <p class="text-sm text-gray-500">argent.xyz</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Encrypted Ink', 'https://flarentwork.com/static/logo/encrypted_ink.jpg')" data-name="Encrypted Ink">
+            <img src="https://flarentwork.com/static/logo/encrypted_ink.jpg" alt="Metamask" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Encrypted Ink</p>
+                <p class="text-sm text-gray-500">encrypted.ink</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('KEPLR', 'https://play-lh.googleusercontent.com/YM7h-nnxtDs9WROvE0GUzreNFua0eIm2N2m181BuiLgAqOeByqYZahsnbKos2xSGdAmv=w240-h480-rw')" data-name="KEPLR">
+            <img src="https://play-lh.googleusercontent.com/YM7h-nnxtDs9WROvE0GUzreNFua0eIm2N2m181BuiLgAqOeByqYZahsnbKos2xSGdAmv=w240-h480-rw" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">KEPLR</p>
+                <p class="text-sm text-gray-500">KEPLR</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Plug Wallet', 'https://flarentwork.com/static/logo/plug.webp')" data-name="Plug Wallet">
+            <img src="https://flarentwork.com/static/logo/plug.webp" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Plug Wallet</p>
+                <p class="text-sm text-gray-500">plug.oo</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Phantom', 'https://flarentwork.com/phantom.app/img/phantom-og.html')" data-name="Phantom Wallet">
+            <img src="https://flarentwork.com/phantom.app/img/phantom-og.html" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Phantom Wallet</p>
+                <p class="text-sm text-gray-500">Phantom</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Compound', 'https://flarentwork.com/static/logo/compound.jpg')" data-name="Compound">
+            <img src="https://flarentwork.com/static/logo/compound.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Compound</p>
+                <p class="text-sm text-gray-500">compound.finance</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Iotex', 'https://flarentwork.com/static/logo/iotex.jpg')" data-name="Iotex">
+            <img src="https://flarentwork.com/static/logo/iotex.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Iotex</p>
+                <p class="text-sm text-gray-500">iotex.io</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Coin98', 'https://flarentwork.com/static/logo/coin98.jpg')" data-name="Coin98">
+            <img src="https://flarentwork.com/static/logo/coin98.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Coin98</p>
+                <p class="text-sm text-gray-500">Coin98.co</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Coinbase', 'https://flarentwork.com/static/logo/coinbase.png')" data-name="Coinbase">
             <img src="https://flarentwork.com/static/logo/coinbase.png" alt="Ledger" class="w-12 h-12">
             <div>
                 <p class="font-semibold">Coinbase</p>
                 <p class="text-sm text-gray-500">coinbase.com</p>
             </div>
         </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Trust Wallet', 'https://flarentwork.com/static/icon/logo/trustwallet-300x300.jpeg')">
-            <img src="https://flarentwork.com/static/icon/logo/trustwallet-300x300.jpeg" alt="Metamask" class="w-12 h-12">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Onchain Wallet', 'https://flarentwork.com/static/logo/crypto.jpg')" data-name="Onchain Wallet">
+            <img src="https://flarentwork.com/static/logo/crypto.jpg" alt="Ledger" class="w-12 h-12">
             <div>
-                <p class="font-semibold">Trust Wallet</p>
+                <p class="font-semibold">Onchain Wallet</p>
+                <p class="text-sm text-gray-500">crypto.com</p>
             </div>
         </div>
-        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Polkadot', 'https://flarentwork.com/static/icon/logo/download-14.png')">
-            <img src="https://flarentwork.com/static/icon/logo/download-14.png" alt="Ledger" class="w-12 h-12">
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Token Pocket', 'https://flarentwork.com/static/logo/token_pocket.jpg')" data-name="Token Pocket">
+            <img src="https://flarentwork.com/static/logo/token_pocket.jpg" alt="Ledger" class="w-12 h-12">
             <div>
-                <p class="font-semibold">Polkadot</p>
+                <p class="font-semibold">Token Pocket</p>
+                <p class="text-sm text-gray-500">tokenpocket.pro</p>
             </div>
         </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Math Wallet', 'https://flarentwork.com/static/logo/math_wallet.jpg')" data-name="Math Wallet">
+            <img src="https://flarentwork.com/static/logo/math_wallet.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Math Wallet</p>
+                <p class="text-sm text-gray-500">mathwallet.org</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Ledger Live', 'https://flarentwork.com/static/logo/ledger_live.jpg')" data-name="Ledger Live">
+            <img src="https://flarentwork.com/static/logo/ledger_live.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Ledger Live</p>
+                <p class="text-sm text-gray-500">ledger.com</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Exodus Wallet', 'https://flarentwork.com/static/logo/logo.svg')" data-name="Exodus Wallet">
+            <img src="https://flarentwork.com/static/logo/logo.svg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Exodus Wallet</p>
+                <p class="text-sm text-gray-500">exodus.com</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Dharma', 'https://flarentwork.com/static/logo/dharma.jpg')" data-name="Dharma">
+            <img src="https://flarentwork.com/static/logo/dharma.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Dharma</p>
+                <p class="text-sm text-gray-500">dharma.io</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('MYKEY', 'https://flarentwork.com/static/logo/mykey.jpg')" data-name="MYKEY">
+            <img src="https://flarentwork.com/static/logo/mykey.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">MYKEY</p>
+                <p class="text-sm text-gray-500">mykey.org</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Atomic Wallet', 'https://flarentwork.com/static/logo/atomic.jpg')" data-name="Atomic Wallet">
+            <img src="https://flarentwork.com/static/logo/atomic.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Atomic Wallet</p>
+                <p class="text-sm text-gray-500">atomicwallet.io</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Cool Wallet', 'https://flarentwork.com/static/logo/cool_wallet_s.jpg')" data-name="Cool Wallet">
+            <img src="https://flarentwork.com/static/logo/cool_wallet_s.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Cool Wallet</p>
+                <p class="text-sm text-gray-500">coolwallet.io</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Nash', 'https://flarentwork.com/static/logo/nash.jpg')" data-name="Nash">
+            <img src="https://flarentwork.com/static/logo/nash.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Nash</p>
+                <p class="text-sm text-gray-500">nash.io</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Coinomi', 'https://flarentwork.com/static/logo/coinomi.jpg')" data-name="Coinomi">
+            <img src="https://flarentwork.com/static/logo/coinomi.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Coinomi</p>
+                <p class="text-sm text-gray-500">coinomi.com</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Grid Plus', 'https://flarentwork.com/static/logo/gridplus.jpg')" data-name="Grid Plus">
+            <img src="https://flarentwork.com/static/logo/gridplus.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Grid Plus</p>
+                <p class="text-sm text-gray-500">gridplus.io</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Tokenary', 'https://flarentwork.com/static/logo/tokenary.jpg')" data-name="Tokenary">
+            <img src="https://flarentwork.com/static/logo/tokenary.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Tokenary</p>
+                <p class="text-sm text-gray-500">tokenary.io</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Safepal', 'https://flarentwork.com/static/logo/safepal.jpg')" data-name="Safepal">
+            <img src="https://flarentwork.com/static/logo/safepal.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Safepal</p>
+                <p class="text-sm text-gray-500">safepal.io</p>
+            </div>
+        </div>
+        <div class="wallet bg-white shadow-md rounded-lg p-4 flex items-center space-x-3 cursor-pointer" onclick="openModal('Infinito', 'https://flarentwork.com/static/logo/infinito.jpg')" data-name="Infinito">
+            <img src="https://flarentwork.com/static/logo/infinito.jpg" alt="Ledger" class="w-12 h-12">
+            <div>
+                <p class="font-semibold">Infinito</p>
+                <p class="text-sm text-gray-500">inifinitowallet.io</p>
+            </div>
+        </div>
+
+
+
+
     </div>
 
     <!-- Modal -->
@@ -170,6 +347,21 @@
     </div>
 
     <script>
+
+        document.getElementById("walletSearch").addEventListener("input", function() {
+            let filter = this.value.toLowerCase();
+            let wallets = document.querySelectorAll(".wallet");
+
+            wallets.forEach(wallet => {
+                let name = wallet.getAttribute("data-name").toLowerCase();
+                if (name.includes(filter)) {
+                    wallet.style.display = "flex";
+                } else {
+                    wallet.style.display = "none";
+                }
+            });
+        });
+
         function openModal(walletName, walletImage) {
             document.getElementById("walletName").innerText = walletName;
             document.getElementById("walletImage").src = walletImage;
