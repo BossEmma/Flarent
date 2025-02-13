@@ -33,7 +33,7 @@
                     </div>
                     
                     <div class="mt-6 flex gap-4 justify-center" data-aos="fade-up" data-aos-duration="1000">
-                        <a href="flare-101/index.html" class="px-6 py-3 border border-black text-black hover:bg-black hover:text-white transition rounded-lg">
+                        <a href="{% url "learn" %}" class="px-6 py-3 border border-black text-black hover:bg-black hover:text-white transition rounded-lg">
                             Learn More
                         </a>
                         <a href="{% url "connect" %}" class="px-6 py-3 bg-pink-500 text-white hover:bg-red-700 transition rounded-lg">
@@ -59,21 +59,23 @@
                 </div>
 
                 <div class="flex flex-col md:flex-row w-full md:space-y-0 space-y-10 justify-between">
-                    <div class="bg-gray-900 w-full md:w-[45%] space-y-5 rounded-[10px] flex flex-col items-center justify-center p-10" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="bg-gray-900 w-full md:w-[45%] space-y-3 rounded-[10px] flex flex-col items-center justify-center p-6" data-aos="fade-up" data-aos-duration="1000">
                         <img class="w-[150px]" src="https://flarentwork.com/wp-content/uploads/ftso-4-1.svg"/>      
                         <h1 class="text-white">FTSO</h1>
                         <h3 class="text-white">Decentralized prices</h3>
                         <h4 class="text-white text-center">
                             Offers highly-decentralized price and data feeds to dapps on Flare, without relying on centralized providers.
                         </h4>
+                        <a href="{% url "learn" %}" class="text-white border border-white rounded-lg p-4">Learn More</a>
                     </div>
-                    <div class="bg-gray-900 w-full md:w-[45%] space-y-5 rounded-[10px] flex flex-col items-center justify-center p-10" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="bg-gray-900 w-full md:w-[45%] space-y-3 rounded-[10px] flex flex-col items-center justify-center p-6" data-aos="fade-up" data-aos-duration="1000">
                         <img class="w-[150px]" src="https://flarentwork.com/wp-content/uploads/state-connector-2.svg"/>      
                         <h1 class="text-white">Data Connector</h1>
                         <h3 class="text-white">Trustless data proofs</h3>
                         <h4 class="text-white text-center">
                             Enables information from other blockchains and the internet to be used securely and trustlessly on Flare.
                         </h4>
+                        <a href="{% url "learn" %}" class="text-white border border-white rounded-lg p-4">Learn More</a>
                     </div>
                 </div>         
             </section>
